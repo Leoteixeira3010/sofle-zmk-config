@@ -1,7 +1,7 @@
 include:
   - board: nice_nano_v2
     shield: sofle_rgb_left
-    snippet: studio-rpc-usb-uart
+    # REMOVIDO: snippet: studio-rpc-usb-uart (Causa conflito com a matriz do Sofle V1)
     artifact-name: sofle_left_debug
   - board: nice_nano_v2
     shield: sofle_rgb_right
