@@ -1,13 +1,7 @@
 #include "sofle_rgb.dtsi"
 
 &kscan0 {
-    /* Herda a matriz do .dtsi */
+    /* Pinagem já definida no dtsi */
 };
 
-&left_encoder {
-    /* Desativado para evitar conflito com a matriz de colunas */
-    status = "disabled";
-    /* Deixamos os pinos comentados ou removidos para o compilador não reclamar de conflito */
-    /* a-gpios = <&pro_micro 20 ...>; */
-    /* b-gpios = <&pro_micro 21 ...>; */
-};
+/* Encoder já desativado no dtsi, não precisamos mexer aqui */
