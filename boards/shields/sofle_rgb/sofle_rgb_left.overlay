@@ -1,16 +1,13 @@
 #include "sofle_rgb.dtsi"
 
 &kscan0 {
-    col-gpios
-        = <&pro_micro 19 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 14 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 16 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 10 GPIO_ACTIVE_HIGH>
-        ;
+    /* Manteiga a definição base do .dtsi */
 };
 
 &left_encoder {
     status = "okay";
+    /* Pinos do Encoder Esquerdo (V1 partilha pinos com Colunas, mas ZMK precisa de definição direta) */
+    /* A = F5 (20), B = F4 (21) */
+    a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 };
