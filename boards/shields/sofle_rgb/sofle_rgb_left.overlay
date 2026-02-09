@@ -1,7 +1,0 @@
-#include "sofle_rgb.dtsi"
-
-&kscan0 {
-    /* Pinagem já definida no dtsi */
-};
-
-/* Encoder já desativado no dtsi, não precisamos mexer aqui */
