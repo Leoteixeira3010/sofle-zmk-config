@@ -1,13 +1,14 @@
 #include "sofle_rgb.dtsi"
 
-&kscan0 {
-    /* Manteiga a definição base do .dtsi */
+&default_transform {
+    col-offset = <6>;
 };
 
-&left_encoder {
-    status = "okay";
-    /* Pinos do Encoder Esquerdo (V1 partilha pinos com Colunas, mas ZMK precisa de definição direta) */
-    /* A = F5 (20), B = F4 (21) */
-    a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+&kscan0 {
+    /* Herda a matriz do .dtsi */
+};
+
+&right_encoder {
+    /* Desativado para evitar conflito */
+    status = "disabled";
 };
