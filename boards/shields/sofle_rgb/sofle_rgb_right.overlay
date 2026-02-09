@@ -5,10 +5,5 @@
 };
 
 &kscan0 {
-    /* Herda a matriz do .dtsi */
-};
-
-&right_encoder {
-    /* Desativado para evitar conflito */
-    status = "disabled";
+     /* Pinagem já definida no dtsi */
 };
